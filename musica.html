@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Barra de Música</title>
+  <link rel="stylesheet" href="musica.css" />
+</head>
+<body>
+
+  <button class="btn-top-left"><a href="index.html">Voltar</a></button>
+
+  <div id="interface-musica">
+    <div class="player">
+      <div class="tela-musica">
+        <div class="capa">
+          <img src="img/musica.jpg" alt="Capa da música Neon Dreams" class="capa-musica" />
+        </div>
+        <div class="info">
+          <h3 class="titulo-musica">Medley de Igaratá 4</h3>
+          <p class="artista">Mc Negao Original, DJ Guh Mix</p>
+        </div>
+      </div>
+
+      <div class="barra-progresso">
+        <div class="progresso"></div>
+      </div>
+
+      <div class="controles">
+        <button class="botao anterior" aria-label="Música anterior">&#9664;</button>
+        <button class="botao play" id="play-pause" aria-label="Tocar/Pausar">&#9654;</button>
+        <button class="botao proximo" aria-label="Próxima música">&#9654;&#9654;</button>
+      </div>
+
+      <div class="volume">
+        <div class="icone-volume">&#128266;</div>
+        <div class="barra-volume">
+          <div class="nivel-volume"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Script simples para alternar entre play e pause
+    const botaoPlay = document.getElementById('play-pause');
+    let tocando = false;
+
+    botaoPlay.addEventListener('click', () => {
+      tocando = !tocando;
+      botaoPlay.innerHTML = tocando ? '&#10073;&#10073;' : '&#9654;';
+      botaoPlay.setAttribute('aria-label', tocando ? 'Pausar música' : 'Tocar música');
+    });
+  </script>
+  
+</body>
+</html>

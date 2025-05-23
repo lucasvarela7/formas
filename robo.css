@@ -1,0 +1,113 @@
+/* ==== Robô Futurista ==== */
+#robo-futurista {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent; /* remove o fundo */
+  height: 100vh; /* altura total da tela */
+  background: #111;
+}
+
+.robo {
+  position: relative;
+  width: 120px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cabeça */
+.cabeca {
+  width: 80px;
+  height: 60px;
+  background: linear-gradient(135deg, #ff00cc, #3333ff);
+  clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
+  border: 2px solid #fff;
+  margin-bottom: 5px;
+}
+
+/* Olhos */
+.olhos {
+  display: flex;
+  justify-content: space-between;
+  width: 50px;
+  margin-top: -40px;
+  z-index: 2;
+}
+
+.olho {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 6px 2px cyan;
+}
+
+/* Tronco */
+.tronco {
+  width: 100px;
+  height: 80px;
+  background: linear-gradient(to bottom, #00e, #008);
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  border: 2px solid #fff;
+  margin-top: 10px;
+}
+
+/* Braços */
+.braco {
+  position: absolute;
+  width: 20px;
+  height: 60px;
+  background: linear-gradient(to bottom, #ffcc00, #ff6600);
+  top: 80px;
+  border-radius: 10px;
+}
+
+.braco.esquerdo {
+  left: -20px;
+}
+
+.braco.direito {
+  right: -20px;
+}
+
+/* Pernas */
+.perna {
+  position: absolute;
+  width: 20px;
+  height: 50px;
+  background: linear-gradient(to bottom, #0f0, #090);
+  bottom: -10px;
+  border-radius: 5px;
+}
+
+.perna.esquerda {
+  left: 20px;
+}
+
+.perna.direita {
+  right: 20px;
+}
+
+/* Botão no canto superior esquerdo */
+.btn-top-left {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  color: white;
+  background: linear-gradient(90deg, #673ab7, #03a9f4);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(103, 58, 183, 0.4);
+  transition: background 0.3s ease;
+  z-index: 1000;
+}
+
+.btn-top-left:hover {
+  background: linear-gradient(90deg, #03a9f4, #673ab7);
+  box-shadow: 0 6px 12px rgba(3, 169, 244, 0.6);
+}

@@ -1,0 +1,74 @@
+/* Corpo da página centralizado */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;  /* centraliza horizontal */
+  align-items: center;      /* centraliza vertical */
+  background: #222;         /* só para destacar o fundo */
+}
+
+/* Container principal */
+#padrao-decorativo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 2rem;
+  background: #111;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+/* Grade das formas */
+.padrao-decorativo {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(2, 80px);
+  gap: 20px;
+}
+
+/* Formas geométricas animadas */
+.forma {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ff6f61, #ffcc00);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  animation: girar 10s linear infinite;
+  transition: transform 0.3s ease;
+}
+
+.forma:hover {
+  transform: scale(1.1) rotate(45deg);
+}
+
+@keyframes girar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Botão fixo no canto superior esquerdo */
+.btn-top-left {
+  position: fixed; /* fixa no viewport */
+  top: 10px;      /* distância do topo */
+  left: 10px;     /* distância da esquerda */
+  padding: 12px 20px;
+  font-size: 1rem;
+  color: white;
+  background: linear-gradient(90deg, #673ab7, #03a9f4);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(103, 58, 183, 0.4);
+  transition: background 0.3s ease;
+  z-index: 1000; /* fica na frente */
+}
+
+.btn-top-left:hover {
+  background: linear-gradient(90deg, #03a9f4, #673ab7);
+  box-shadow: 0 6px 12px rgba(3, 169, 244, 0.6);
+}
