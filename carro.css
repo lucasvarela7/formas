@@ -1,66 +1,147 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  
-}
-
 body {
-  font-family: Arial, sans-serif;
-
-}
-
-
-
-/* ==== Container do Carro Esportivo ==== */
-#carro-esportivo {
-  
+  background: linear-gradient(to bottom, #050505, #121212);
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #111;
-  height: 100vh; /* centraliza verticalmente */
+  height: 100vh;
+  margin: 0;
 }
 
-/* ==== Corpo do Carro ==== */
 .carro {
   position: relative;
-  width: 200px;
-  height: 60px;
-  background-color: #f44336;
-  border-radius: 20px 20px 5px 5px;
+  width: 450px;
+  height: 200px;
 }
 
-/* ==== Teto ==== */
-.teto {
+/* Corpo principal */
+.corpo {
   position: absolute;
-  top: -30px;
-  left: 40px;
-  width: 120px;
-  height: 30px;
-  background-color: #c62828;
-  border-radius: 15px 15px 0 0;
+  bottom: 50px;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to right, #d00000, #800000);
+  border-radius: 20px 20px 10px 10px;
+  box-shadow: 0 0 15px #d00000;
 }
 
-/* ==== Rodas ==== */
+/* Cockpit */
+.cockpit {
+  position: absolute;
+  bottom: 120px;
+  left: 90px;
+  width: 270px;
+  height: 50px;
+  background: #222;
+  border-radius: 20px 20px 0 0;
+  box-shadow: inset 0 0 10px #333;
+}
+
+/* Spoiler traseiro */
+.spoiler {
+  position: absolute;
+  right: 10px;
+  bottom: 130px;
+  width: 40px;
+  height: 10px;
+  background: #333;
+  border-radius: 5px;
+  transform: rotate(-10deg);
+}
+
+/* Rodas */
 .roda {
   position: absolute;
-  bottom: -15px;
-  width: 30px;
-  height: 30px;
-  background: #333;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  background: #000;
+  border: 5px solid #888;
   border-radius: 50%;
-  border: 3px solid #666;
+  box-shadow: inset 0 0 5px #555;
 }
 
-.roda.esquerda {
-  left: 20px;
+.miolo {
+  width: 20px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 18px auto;
 }
 
-.roda.direita {
-  right: 20px;
+.roda1 {
+  left: 50px;
 }
 
+.roda2 {
+  right: 50px;
+}
+
+/* Faróis triangulares */
+.farol {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.frente {
+  left: -30px;
+  top: 100px;
+  border-width: 10px 30px 10px 0;
+  border-color: transparent #00f6ff transparent transparent;
+  filter: drop-shadow(0 0 10px #00f6ff);
+}
+
+.traseiro {
+  right: -30px;
+  top: 100px;
+  border-width: 10px 0 10px 30px;
+  border-color: transparent transparent transparent #ff0000;
+  filter: drop-shadow(0 0 10px #ff0000);
+}
+
+/* Para-choques */
+.parachoque {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.parachoque.frente {
+  left: -20px;
+  bottom: 70px;
+  border-width: 15px 20px 15px 0;
+  border-color: transparent #333 transparent transparent;
+}
+
+.parachoque.traseiro {
+  right: -20px;
+  bottom: 70px;
+  border-width: 15px 0 15px 20px;
+  border-color: transparent transparent transparent #333;
+}
+
+/* Detalhes aerodinâmicos */
+.detalhe {
+  position: absolute;
+  height: 4px;
+  background: #eee;
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+.detalhe1 {
+  top: 130px;
+  left: 80px;
+  width: 100px;
+}
+
+.detalhe2 {
+  top: 140px;
+  left: 180px;
+  width: 120px;
+}
 
 
 .btn-top-left {
